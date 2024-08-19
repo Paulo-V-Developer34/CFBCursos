@@ -1,7 +1,7 @@
 //o método map serve para percorrer um array por completo
 
 let cursos = ['php','js','java','python']
-cursos.map((item, numero_item)=>{
+cursos.map((item, numero_item)=>{                           //!!!! há também um terceiro parâmetro no map
     console.log("seu curso é de "+ item)
 })
 
