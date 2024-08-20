@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(154, 156, 158);
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 250px;
+    height: 750px;
+}
+
+.curso {
+    background-color: rgb(100, 101, 102);
+    border: 3px solid black;
+    color: white;
+    margin: 8px;
+    text-size-adjust: 50px;
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+}
