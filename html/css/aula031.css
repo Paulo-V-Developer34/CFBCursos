@@ -12,11 +12,14 @@
 }
 
 .curso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(100, 101, 102);
     border: 3px solid black;
     color: white;
     margin: 8px;
-    text-size-adjust: 50px;
+    font-size: 30px;
     width: 200px;
     height: 80px;
     border-radius: 10px;
