@@ -45,6 +45,11 @@ body {
     border-radius: 10px;
 }
 
+img {
+    width: 45px;
+    height: 45px;
+}
+
 .destaque {
     background-color: rgb(211, 104, 104) !important;
     border: solid 5px rgb(104, 14, 14) !important;
