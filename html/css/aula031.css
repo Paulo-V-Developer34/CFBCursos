@@ -1,3 +1,9 @@
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -23,4 +29,23 @@
     width: 200px;
     height: 80px;
     border-radius: 10px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 127, 253);
+    border: 3px solid rgb(0, 7, 71);
+    color: rgb(0, 0, 0);
+    margin: 8px;
+    font-size: 30px;
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.destaque {
+    background-color: rgb(211, 104, 104) !important;
+    border: solid 5px rgb(104, 14, 14) !important;
 }
