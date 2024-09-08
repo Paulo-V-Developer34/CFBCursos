@@ -15,7 +15,7 @@ const pessoa={
     }
 }
 
-const p1 = pessoa
+const p1 = pessoa //eu não posso criar uma instância de um objeto literal
 const p2 = pessoa
 
 p1.nome = "Paulo"
