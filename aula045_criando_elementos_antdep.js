@@ -1,4 +1,10 @@
-//Podemos usar removeChild para isso
+//botoes
+
+const btnadd = document.getElementById('btnadd')
+const btnexc = document.getElementById('btnexc')
+const btnaddanter = document.getElementById('btnaddanter')
+const btnaddposter = document.getElementById('btnaddposter')
+const txtnomecurso = document.getElementById('nomecurso')
 
 let cursos = ['Python','PHP','Java','Typescript','C++']
 //adicionando elementos ao DOM
@@ -23,13 +29,14 @@ const criarcursos = (curso)=>{
     cursodiv.setAttribute('class',"curso")
     let eldiv = document.getElementById(iddiv)
 
-    //criando a lixeira
+    //criando o radio
     let radio = document.createElement('input')
     radio.setAttribute('type','radio')
     radio.setAttribute('name','rb_cursos')
     cursodiv.appendChild(radio)
 
     eldiv.appendChild(cursodiv)
+    return cursodiv
 }
 
 cursos.map((el)=>{
@@ -48,15 +55,31 @@ function selecionado(){
 }
 
 //botão para selecionar elemento
-document.getElementById('btnadd').addEventListener('click',(evt)=>{
+btnadd.addEventListener('click',(evt)=>{
     const es = selecionado()
     const elselect = es.previousSibling.textContent //lembre-se o fileter sempre retorna um array, isso significa que o elemento [0] teve que ser explicitamente citado
     alert(`O elemento selecionado foi o ${elselect}`)
 })
 
 //botão para excluir elemento
-document.getElementById('btnexc').addEventListener('click', (evt)=>{
+btnexc.addEventListener('click', (evt)=>{
     const es = selecionado()
     const elselect = es.parentNode
     elselect.remove() //remove a si mesmo
+})
+
+//botão adicionar antes
+btnaddanter.addEventListener('click', (evt)=>{
+    const es = selecionado()
+    const elselect = es.parentNode
+    const ccriado = criarcursos(txtnomecurso.value)
+    document.getElementById(iddiv).insertBefore(ccriado, elselect)
+})
+
+//botão adicionar depois
+btnaddposter.addEventListener('click', (evt)=>{
+    const es = selecionado()
+    const elselect = es.parentNode
+    const ccriado = criarcursos(txtnomecurso.value)
+    document.getElementById(iddiv).insertBefore(ccriado, elselect.nextSibling)
 })
